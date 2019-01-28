@@ -1,0 +1,2 @@
+ansible-playbook install-openvpn-client.yml -i hosts
+

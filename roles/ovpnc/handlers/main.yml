@@ -1,0 +1,9 @@
+---
+# handlers file for install-openvpn-client
+- name: restart openvpn
+  service: 
+    name: openvpn@client
+    state: restarted
+    enabled: yes
+  become: yes
+

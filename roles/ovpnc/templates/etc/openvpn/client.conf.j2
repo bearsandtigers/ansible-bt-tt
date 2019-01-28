@@ -1,0 +1,31 @@
+# {{ ansible_managed }}
+client
+nobind
+dev tun
+key-direction 1
+remote-cert-tls server
+
+remote {{ hostvars[inventory_hostname]['ovpnc_server'] | default(ovpnc_server) }} 2195 udp
+
+
+<key>
+{{ hostvars[inventory_hostname]['ovpnc_private_key'] }}
+</key>
+
+<cert>
+{{ hostvars[inventory_hostname]['ovpnc_cert'] }}
+</cert>
+
+<ca>
+{{ ovpnc_ca }}
+</ca>
+
+<tls-auth>
+{{ ovpnc_tlsauth }}
+</tls-auth>
+
+key-direction 1
+
+auth-nocache
+comp-lzo
+reneg-sec 259200

@@ -1,0 +1,9 @@
+---
+ovpnc_cert: specify_it_in_the_corresponding_host_var
+
+ovpnc_os_codename: xenial
+
+ovpnc_private_key: specify_it_in_the_corresponding_host_var
+
+ovpnc_server: 8.8.8.8
+

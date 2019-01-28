@@ -1,0 +1,9 @@
+---
+- hosts: ovpn_clients
+
+  roles: 
+   - ovpnc
+
+
+
+

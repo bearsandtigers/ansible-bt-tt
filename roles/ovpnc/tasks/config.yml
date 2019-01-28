@@ -1,0 +1,17 @@
+- name: Enable OpenVPN autostart
+  replace: 
+    dest: /etc/default/openvpn 
+    regexp: "^#AUTOSTART=\"all\"" 
+    replace: "AUTOSTART=\"all\""
+  become: yes
+  
+- name: Push client config
+  template: 
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    backup: yes
+  with_items: 
+      - "etc/openvpn/client.conf"
+  become: yes  
+  notify:
+    - restart openvpn

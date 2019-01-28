@@ -1,0 +1,11 @@
+[ovpn_clients]
+xenial ansible_ssh_host=172.16.20.5 ansible_ssh_port=2255 ansible_ssh_user=user ansible_ssh_pass=user
+#xenial ansible_ssh_host=127.0.0.1 ansible_ssh_port=22 ansible_ssh_user=user ansible_ssh_pass=test ansible_become=yes ansible_become_method=sudo ansible_become_pass=test
+#stroi  ansible_ssh_host=192.168.8.49 ansible_ssh_port=22 ansible_ssh_user=vahta ansible_ssh_pass=1 ansible_become=yes ansible_become_method=sudo ansible_become_pass=1
+
+	
+
+
+
+
+
